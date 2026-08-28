@@ -22,7 +22,7 @@ function App() {
   const probability = result ? Math.round(result.probability * 100) : 0
   return <main className="app-shell">
     <div className="ambient ambient-one" /><div className="ambient ambient-two" />
-    <header className="app-header"><div className="brand-mark" aria-hidden="true"><span /><span /><span /></div><div><p className="eyebrow">PAYMENT INTELLIGENCE</p><h1>RevivePay <em>AI</em></h1><p className="subtitle">Agentic Payment Failure Recovery System</p></div><div className="live-status"><i />System ready</div></header>
+    <header className="app-header"><div className="brand-mark" aria-hidden="true"><img src="/favi.svg" alt="" /></div><div><p className="eyebrow">PAYMENT INTELLIGENCE</p><h1>RevivePay <em>AI</em></h1><p className="subtitle">Agentic Payment Failure Recovery System</p></div><div className="live-status"><i />System ready</div></header>
     <section className="workspace" aria-label="Payment recovery prediction">
       <div className="intro"><div><p className="section-kicker">RECOVERY COMMAND CENTER</p><h2>Turn failed payments into<br /><span>recovered revenue.</span></h2></div><p>Give the recovery agent transaction context and receive a data-driven next best action in seconds.</p></div>
       <form className="form-card" onSubmit={handleSubmit}>
