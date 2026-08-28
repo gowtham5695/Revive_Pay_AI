@@ -14,7 +14,7 @@ function App() {
     event.preventDefault(); setLoading(true); setError('')
     const payload = { ...form, transaction_amount: Number(form.transaction_amount), customer_tenure_months: Number(form.customer_tenure_months), retry_count: Number(form.retry_count), gateway_response_time_ms: Number(form.gateway_response_time_ms) }
     try {
-      const response = await fetch('http://127.0.0.1:8000/predict-and-decide', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
+      const response = await fetch('https://revive-pay-ai.onrender.com/predict-and-decide', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
       if (!response.ok) throw new Error('Prediction request failed')
       setResult(await response.json())
     } catch { setResult(null); setError('Could not reach the prediction service. Please make sure the API is running and try again.') } finally { setLoading(false) }
