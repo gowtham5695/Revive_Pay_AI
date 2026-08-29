@@ -1,12 +1,10 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
+from fastapi.middleware.cors import CORSMiddleware
 import joblib
 import pandas as pd
 
 app = FastAPI()
-
-model = joblib.load('src/final_model.pkl')
-from fastapi.middleware.cors import CORSMiddleware
 
 app.add_middleware(
     CORSMiddleware,
@@ -15,6 +13,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+model = joblib.load('src/final_model.pkl')
+
 print("Model loaded successfully")
 
 
@@ -61,7 +62,7 @@ def predict_and_decide(transaction: TransactionRequest):
         'customer_tenure_months': transaction.customer_tenure_months,
         'retry_count': transaction.retry_count,
         'gateway_response_time_ms': transaction.gateway_response_time_ms,
-        'is_high_value_transaction': int(transaction.transaction_amount > 70),
+        'is_high_value_transaction': int(transaction.transaction_amount > 846.3),
         'is_repeat_failure': int(transaction.retry_count > 0),
     }
 
