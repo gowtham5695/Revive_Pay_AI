@@ -1,0 +1,11 @@
+{
+  "total_failed_revenue": 1088056.8,
+  "baseline_recovered": 550431.0,
+  "baseline_recovery_rate": 0.5059,
+  "potential_additional_revenue": 278170.2,
+  "additional_recovered": 111268.08,
+  "total_recovered_with_system": 661699.08,
+  "improvement_percentage": 20.21,
+  "wasted_retry_avoided": 221327.4,
+  "card_expired_cases_count": 278
+}
