@@ -74,7 +74,7 @@ RevivePay AI/
 │   ├── data_prep_03.ipynb         # Feature engineering
 │   ├── data_prep_04.ipynb         # Train/test split, imbalance check
 │   ├── model_training.ipynb       # Model training, tuning
-│   ├── 07_decision_agent.ipynb    # Decision agent + business impact
+│   ├── agent.ipynb    # Decision agent + business impact
 │   ├── api.py                     # FastAPI backend (prediction, impact, audit trail)
 │   └── final_model.pkl            # Trained, tuned model (17 features)
 ├── frontend/                      # React application
